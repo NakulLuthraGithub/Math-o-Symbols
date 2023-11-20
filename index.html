@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- This is me, Nakul, I am saying that all the credits of libs are not mine. -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Math-o-Symbols | Nakul Luthra</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <link href="assets/libs/aos/aos.css" rel="stylesheet" />
+    <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="assets/libs/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/libs/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/libs/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile">
+          <img
+            src="assets/img/profile-img.jpg"
+            alt=""
+            class="img-fluid rounded-circle"
+          />
+          <input
+            type="text"
+            id="Copy-this"
+            value="7719421910"
+            style="display: none"
+          />
+          <h1 class="text-light"><a href="index.html">Math-o-Symbols</a></h1>
+          <div class="social-links mt-3 text-center">
+            <a href="https://www.instagram.com/itz_ryxer/" class="instagram"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="https://github.com/NakulLuthraGithub/" class="github"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://discord.com/users/823863263900205066"
+              class="discord"
+              ><i class="bx bxl-discord"></i
+            ></a>
+            <a href="#" onclick="CopyWapp()" class="whatsapp"
+              ><i class="bx bxl-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="#hero" class="nav-link scrollto active"
+                ><i class="bx bx-home"></i> <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link scrollto"
+                ><i class="bx bx-user"></i> <span>About</span></a
+              >
+            </li>
+            <li>
+              <a href="#portfolio" class="nav-link scrollto"
+                ><i class="bx bx-math"></i> <span>Symbols</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link scrollto"
+                ><i class="bx bx-envelope"></i> <span>Contact</span></a
+              >
+            </li>
+            <li>
+              <a onclick="toggleCalc()" id="cal-check" class="nav-link scrollto"
+                ><i class="bx bx-wrench"></i> <span>Calculator</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Math-o-Symbols.</h1>
+        <p>
+          Maths Is
+          <span
+            class="typed"
+            style="color: rgb(85, 233, 85)"
+            data-typed-items="All About Understanding., Key To Success. , Key To Everything In Universe., So Much FUN!!"
+          ></span>
+        </p>
+      </div>
+      <div class="calc-container" id="Calc-Wrap-main">
+        <div class="calc-wrap">
+          <form>
+            <div class="close" onclick="toggleCalc()">
+              <span><i class="bx bx-x"></i></span>
+            </div>
+            <div class="display">
+              <input
+                type="text"
+                value=""
+                readonly
+                name="display"
+                class="display-inp"
+                id="display"
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                class="oper"
+                value="AC"
+                onclick="display.value = '' "
+              />
+              <input
+                type="button"
+                class="oper"
+                value="DE"
+                onclick="display.value = display.value.toString().slice(0,-1)"
+              />
+              <input
+                type="button"
+                class="oper"
+                value="."
+                onclick="display.value += '.' "
+              />
+              <input
+                type="button"
+                class="oper"
+                value="÷"
+                onclick="display.value += '/' "
+              />
+            </div>
+            <div>
+              <input type="button" value="7" onclick="display.value += '7'" />
+              <input type="button" value="8" onclick="display.value += '8' " />
+              <input type="button" value="9" onclick="display.value += '9' " />
+              <input
+                type="button"
+                class="oper"
+                value="x"
+                onclick="display.value += '*' "
+              />
+            </div>
+            <div>
+              <input type="button" value="4" onclick="display.value += '4' " />
+              <input type="button" value="5" onclick="display.value += '5' " />
+              <input type="button" value="6" onclick="display.value += '6' " />
+              <input
+                type="button"
+                class="oper"
+                value="-"
+                onclick="display.value += '-' "
+              />
+            </div>
+            <div>
+              <input type="button" value="1" onclick="display.value += '1' " />
+              <input type="button" value="2" onclick="display.value += '2' " />
+              <input type="button" value="3" onclick="display.value += '3' " />
+              <input
+                type="button"
+                class="oper"
+                value="+"
+                onclick="display.value += '+' "
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                value="00"
+                onclick="display.value += '00' "
+              />
+              <input type="button" value="0" onclick="display.value += '0' " />
+              <input
+                class="equal oper"
+                type="button"
+                value="="
+                onclick="display.value = eval(display.value)"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <main id="main">
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About</h2>
+            <p>
+              This Is a Website Developed By Students Of Innocent Hearts School.
+              This Website is Developed for helping the Teachers of Our School
+              in making The Maths / Science Assignment Easily. This Website
+              Consists Of Many Unknown / Rare Symbols That were hard to Write on
+              Mobile / PC Keyboards. This Website Also Contains as Additional
+              Calculator That Can Help You too.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img
+                style="border-radius: 10%"
+                src="assets/img/profile-img.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Symbols &amp; Calculations.</h3>
+              <p class="fst-italic">
+                This Website Contains a Section To select Classes And The
+                Symbols Will be Sorted According To the Desired Class.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Number of Symbols:</strong>
+                      <span>Enough</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Website:</strong>
+                      <span
+                        ><a href="https://innocenthearts.in/"
+                          >www.innocenthearts.in
+                        </a></span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Phone:</strong> <span>1800-833-4600</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Jalandher, India</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Symbols</h2>
+            <p>
+              Click on Classes to Filter the Symbols. Or Select All to get All
+              Symbols.
+            </p>
+          </div>
+
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-6th">6th</li>
+                <li data-filter=".filter-7th">7th</li>
+                <li data-filter=".filter-8th">8th</li>
+                <li data-filter=".filter-9th">9th</li>
+                <li data-filter=".filter-10th">10th</li>
+                <li data-filter=".filter-11th">11th</li>
+                <li data-filter=".filter-12th">12th</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="copy-inp">
+            <input type="text" id="Copy-Sym" style="display: none" />
+          </div>
+
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick="copyEquals()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10tfilter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a
+                    title="Click to copy this Symbol."
+                    onclick=" copyNoEquals()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyAprox()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product4.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick="copyPlus()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product5.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyMinus()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10h tfilter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product6.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a
+                    title="Click to copy this Symbol."
+                    onclick=" copyMultiply()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product7.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyDot()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product8.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyDivide()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product22.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyPerpen()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product10.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyCaret()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product11.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyRoot()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product12.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copy3Root()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product13.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copy4Root()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product14.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copySigma()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product15.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyPercent()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product16.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a
+                    title="Click to copy this Symbol."
+                    onclick=" copyPermille()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product17.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyNoEx()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product18.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyEx()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product19.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" Angle()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product20.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyRight()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-6th filter-7th filter-8th filter-9th filter-10th filter-11th filter-12th"
+            >
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/symbols/product21.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-links">
+                  <a title="Click to copy this Symbol." onclick=" copyDeg()"
+                    ><i class="bx bx-copy"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>
+              Contact Us For Sending Us a Feedback or any other issue. Your
+              Reply Will be Given Soon!!
+            </p>
+          </div>
+
+          <div class="row" data-aos="fade-in">
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>2710 NorthPark Drive, Jalandher, Punjab, India</p>
+                </div>
+
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>info@ihgi.in</p>
+                </div>
+
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>1800-833-4600</p>
+                </div>
+
+                <img
+                  style="border: 0; width: 100%; height: 290px"
+                  src="assets/img/location.png"
+                  alt="Location"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form class="php-email-form">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="name">Message</label>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading..</div>
+                  <div class="error-message">Sent</div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright
+          <strong><span>Math-o-Symbols</span></strong>
+        </div>
+        <div class="credits">
+          Designed by
+          <a href="https://github.com/NakulLuthraGithub/">Nakul Luthra</a>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <script src="assets/libs/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/libs/aos/aos.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/libs/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/typed.js/typed.umd.js"></script>
+    <script src="assets/libs/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/libs/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
